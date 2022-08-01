@@ -2,20 +2,23 @@
 def getRate(term):
   global rate
   if(term > 3):
-    return rate+0.5
+    rate = rate + 1
+    return rate
   return rate
 
 def  calcInterest(p,n, rate=5.0):
   return p*n*rate/100 #Local Variable rate will override the global variable rate
 
 def calcInterestGetRate(p,n):
-  return p*n*getRate(n) #The rate variable is not passed, we determine the rate with n value
+  newRate = getRate(n)
+  print('principle - ', p ,' term is ' , n , ' rate is ', newRate )
+  return p*n*newRate/100 #The rate variable is not passed, we determine the rate with n value
   
 # __main__
 
 rate=10
-Print(calcInterest(10000,5))
-Print(calcInterest(10000,5,20)
+print(calcInterest(10000,5))
+print(calcInterest(10000,5,20))
 #calling the calcInterestGetRate
 #since the term is 4 , which is > 3 , the rate will be rate +0.5 and the global value should change
 print(' Global rate before is ', rate)
