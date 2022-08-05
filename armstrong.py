@@ -5,21 +5,21 @@
 #407 is a good example - 4*4*4 + 0*0*0 + 7*7*7 = 64 + 0 + 343 = 407
 
 
-myNum = int(input("Enter a 3 digit number : "))
-if(myNum > 999):
-  print("Please enter a 3 digit number only")
+myNum = int(input("Enter a number : "))
+#if(myNum > 999):
+#  print("Please enter a 3 digit number only")
+#else:
+checkNum = myNum 
+# check the digits of the number
+lenNum = len(str(myNum)) #Since, we are entering 3 digit number, it is always 3
+sumNum = 0
+#Loop thru each digit
+while myNum != 0:
+	remainingNum = lenNum % 10
+	sumNum = sumNum+(remainingNum**lenNum)
+	myNum = myNum//10
+if checkNum == sumNum:
+	print("The given number is armstrong number")
 else:
-  checkNum = myNum 
-  # check the digits of the number
-  lenNum = len(str(myNum)) #Since, we are entering 3 digit number, it is always 3
-  sumNum = 0
-  #Loop thru each digit
-  while myNum != 0:
-	  remainingNum = lenNum % 10
-	  sumNum = sumNum+(remainingNum**lenNum)
-	  myNum = myNum//10
-  if checkNum == sumNum:
-	  print("The given number is armstrong number")
-  else:
-	  print("The given number is not armstrong number")
+	print("The given number is not armstrong number")
 
