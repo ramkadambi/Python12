@@ -5,7 +5,7 @@ def addNum(x,y):
   return x+y
 
 def subNum(x,y):
-  retur x-y
+  return x-y
 
 firstNum = int(input("Enter first Number : "))
 secondNum = int(input("Enter Second Number : "))
